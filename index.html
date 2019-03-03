@@ -25,6 +25,15 @@
             padding-bottom: 4vw;
         }
 
+        .tabs .indicator {
+            background-color: #1a237e;
+        }
+
+        .tabs .tab a:hover,
+        .tabs .tab a.active {
+            background: transparent;
+        }
+
         @media screen and (max-width: 670px) {
             header {
                 min-height: 500px;
@@ -44,9 +53,21 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Photo's</a></li>
-                    <li><a href="#">Sevices</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#photos">Photo's</a></li>
+                    <li><a href="#services">Sevices</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="sidenav grey lighten-2" id="mobile-menu">
                     <li><a href="#">Photo's</a></li>
@@ -58,7 +79,7 @@
     </header>
 
     <!-- photo / grid -->
-    <section class="container section" id="photo's">
+    <section class="container section scrollspy" id="photos">
         <div class="row">
             <div class="col s12 l4">
                 <img src="images/portrait.jpg" alt="" class="responsive-img materialboxed">
@@ -98,14 +119,133 @@
     </section>
 
     <!-- parallax -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/street.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
 
     <!-- services / tabs -->
-
+    <section class="container section scrollspy" id="services">
+        <div class="row">
+            <div class="col s12 l4">
+                <h2 class="indigo-text text-darken-4">What I do...</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque soluta assumenda itaque expedita
+                    quibusdam placeat! Nobis reprehenderit eos qui tempora, exercitationem recusandae atque
+                    perspiciatis. Cumque odio vitae tempore nesciunt fugiat!</p>
+            </div>
+            <div class="col s12 l6 offset-l2">
+                <ul class="tabs">
+                    <li class="tab col s6">
+                        <a href="#photography" class="indigo-text text-darken-4">Photography</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+                    </li>
+                </ul>
+                <div class="col s12" id="photography">
+                    <p class="flow-text indigo-text text-darken-4">PHOTOGRAPHY</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor nobis quod nihil consequatur illo
+                        expedita aut quis doloribus inventore ipsum quaerat neque, libero enim, quisquam, necessitatibus
+                        exercitationem dicta amet maxime?</p>
+                </div>
+                <div class="col s12" id="editing">
+                    <p class="flow-text indigo-text text-darken-4">EDITING</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor nobis quod nihil consequatur illo
+                        expedita aut quis doloribus inventore ipsum quaerat neque, libero enim, quisquam, necessitatibus
+                        exercitationem dicta amet maxime?</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- parallax -->
-
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/stars.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
     <!-- contact form -->
-
+    <section class="container section scrollspy" id="contact">
+        <div class="row">
+            <div class="col s12 l5">
+                <h2 class="indigo-text text-darken-4">Get In Touch</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam laudantium quaerat ullam
+                    eaque tempora dignissimos eos debitis aut nulla necessitatibus, cumque est cum hic modi eius?
+                    Inventore, nemo quo.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam laudantium quaerat ullam
+                    eaque tempora dignissimos eos debitis aut nulla necessitatibus, cumque est cum hic modi eius?
+                    Inventore, nemo quo.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam laudantium quaerat ullam
+                    eaque tempora dignissimos eos debitis aut nulla necessitatibus, cumque est cum hic modi eius?
+                    Inventore, nemo quo.</p>
+            </div>
+            <div class="col s12 l5 offset-l2">
+                <form action="">
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" id="email">
+                        <label for="email">Your email</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea class="materialize-textarea" id="message"></textarea>
+                        <label for="message">Your message</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">calendar_today</i>
+                        <input type="text" id="date" class="datepicker">
+                        <label for="date">Choose a date you need to meet me for...</label>
+                    </div>
+                    <div class="input-field">
+                        <p>Service required...</p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Photography</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Checkbox</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field center">
+                        <button class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- footer -->
+    <footer class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l6">
+                    <h5>About Me</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque incidunt porro itaque deserunt
+                        doloremque! Minima, atque dicta? Iure tempore rerum odit quos ea? Iste earum rem eveniet
+                        exercitationem temporibus repellendus?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque incidunt porro itaque deserunt
+                        doloremque! Minima, atque dicta? Iure tempore rerum odit quos ea? Iste earum rem eveniet
+                        exercitationem temporibus repellendus?</p>
+                </div>
+                <div class="col s12 l4 offset-l2">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="#" class="grey-text text-lighten-3">Facebook</a></li>
+                        <li><a href="#" class="grey-text text-lighten-3">Twitter</a></li>
+                        <li><a href="#" class="grey-text text-lighten-3">Linked In</a></li>
+                        <li><a href="#" class="grey-text text-lighten-3">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-4">
+            <div class="container center-align">&copy; 2018 Panda</div>
+        </div>
+    </footer>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -114,6 +254,11 @@
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+            $('.datepicker').datepicker();
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
         });
     </script>
 </body>
